@@ -3,9 +3,9 @@ const mongodb=require('mongodb');
 const router=express.Router();
 
 
-router.get('/',(req,res)=>{
-    res.send('hello to my web site')
-});
+//router.get('/',(req,res)=>{
+//    res.send('hello to my web site')
+//});
 
 router.get('/',async(req,res)=>
 {
