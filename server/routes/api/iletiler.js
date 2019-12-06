@@ -30,5 +30,14 @@ async function loadIletilerCollection()
  
     return client.db('deneme').collection('iletiler');
 }
+
+router.post('/',async(req,res)=>
+{const iletiler=await loadIletilerCollection();
+    await iletiler.insertOne({
+        text:req.body.text,
+        createAt:new DataCue()
+    });
+res.status(201).send();
+});
 module.exports=router;
 
