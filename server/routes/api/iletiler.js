@@ -19,7 +19,7 @@ async function loadIletilerCollection()
     const client=await mongodb.MongoClient.connect
     (
 
-        'mongodb+srv://abdelrahman:<password>@cluster0-fqdy1.mongodb.net/test?retryWrites=true&w=majority' ,
+        'mongodb+srv://abdelrahman:123456789Asd@cluster0-fqdy1.mongodb.net/test?retryWrites=true&w=majority',
         {
 
         useNewUrlParser:true,
