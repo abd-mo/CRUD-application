@@ -51,14 +51,14 @@ router.delete('/:id',async(req,res)=>
  router.put('/:id',async(req,res,next)=>{
     const iletiler=await loadIletilerCollection();
     const id=new mongodb.ObjectID(req.params.id);
-    await iletiler.update({_id:id},{$set:{text:req.body.text ,upadteddAt:new Date()}});
+    await iletiler.update({_id:id},{$set:{text:req.body.text ,updatedAt:new Date()}});
     res.status(200).send("element updated sucessfully");
     });
 //update datebase using patch
 router.patch('/:id',async(req,res,next)=>{
     const iletiler=await loadIletilerCollection();
     const id=new mongodb.ObjectID(req.params.id);
-     await iletiler.update({_id:id},{$set:{text:req.body.text,upadteddAt:new Date()}});
+     await iletiler.update({_id:id},{$set:{text:req.body.text,updatedAt:new Date()}});
     res.status(200).send("element updated sucessfully");
      });
 module.exports=router;
