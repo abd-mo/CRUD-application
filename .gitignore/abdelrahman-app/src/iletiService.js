@@ -1,0 +1,43 @@
+import axios from 'axios';
+//const url='http://abdelrahman-app.herokuapp.com/api/iletiler/';
+const url = 'api/iletiler/';
+class iletiService{
+
+    //get posts
+static getPosts()
+{
+    return new Promise( async(resolve,reject)=>{
+
+        try {
+            const res= await axios.get(url);
+            const data=res.data;
+            resolve(
+                data.map(ileti=>({
+                    ...ileti,
+                    createdAt : new Date(ileti.createdAt)
+                }))
+            );
+        } catch (err) {
+            reject(err);
+            
+        }
+    });
+}
+    //create post
+
+static inserPosts(text){
+
+    return axios.post(url,{
+        text:text
+    });
+}
+
+    //delete posts
+static deletPosts(id){
+    return axios.delete(`${url}${id}`);
+}
+
+
+    //
+}
+export default iletiService;

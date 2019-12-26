@@ -39,6 +39,12 @@ router.post('/',async(req,res)=>
     });
 res.status(201).send("element inserted sucessfully");
 });
+router.post('/:id',async(req,res)=>
+{const iletiler=await loadIletilerCollection();
+    const id=new mongodb.ObjectID(req.params.id);
+    await iletiler.update({_id:id},{$set:{text:req.body.text ,updatedAt:new Date()}});
+    res.status(200).send("element updated sucessfully");
+    });
 //delete from database
 router.delete('/:id',async(req,res)=>
 {
