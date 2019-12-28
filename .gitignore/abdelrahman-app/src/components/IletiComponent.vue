@@ -9,8 +9,8 @@
     </div>
     <br>
     <div class="update-post">
-      <label for="update-post">ip yazın : </label>
-      <input type="text" id="update-post" v-model="id" placeholder="ip yazin....."> &nbsp; &nbsp;
+      <label for="update-post"> &nbsp; id yazın : </label>
+      <input type="text" id="update-post" v-model="id" placeholder="id yazin....."> &nbsp; &nbsp;
       <button v-on:click="update">update</button>
     </div>
     <hr>
@@ -22,7 +22,7 @@
         ${ileti.createdAt.getMonth()+1}/
         ${ileti.createdAt.getFullYear()}`}}
         <p class="text">{{ileti.text}}</p>
-        <p class="id">Ip : {{ileti._id}}</p>
+        <p class="id">Id : {{ileti._id}}</p>
       </div>
        </div>
       
@@ -86,7 +86,7 @@ p.error {
 
 div.post { 
   position: relative; 
-  border: 10px solid rgb(0, 0, 0, 0); 
+  border: 1px solid rgb(0, 0, 0, 0); 
   background-color:#bcffb8; 
   padding: 10px 10px 30px 10px; 
   margin-bottom: 15px; 

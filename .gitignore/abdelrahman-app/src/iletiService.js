@@ -1,6 +1,6 @@
 import axios from 'axios';
-//const url='http://abdelrahman-app.herokuapp.com/api/iletiler/';
-const url = 'api/iletiler/';
+const url='http://abdelrahman-app.herokuapp.com/api/iletiler/';
+//const url = 'api/iletiler/';
 class iletiService{
 
     //get posts
